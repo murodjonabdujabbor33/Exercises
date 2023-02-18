@@ -20,7 +20,17 @@
 // (age1 < 18) ? console.log("Sizga kirish bepul") ? console.log("Sizga kirish 15000 so'm");
 
 
+// const age = 174;
 
+// if(age < 17){
+//     console.log("You cannot drive.");
+// } else if( age == 17 ){
+//     console.log("Go to driving school.");
+// } else {
+//     console.log("You can drive.");
+// }
+
+// console.log(age < 17 ? "You cannot drive." : ( age == 17 ? "Go to driving school." : "You can drive."));
 
 
 
