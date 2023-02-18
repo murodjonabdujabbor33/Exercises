@@ -51,7 +51,7 @@
 // }
 
 // switch case har doim qat'iy rejimda (===) ishlaydi.
-
+// xato:
 const num = 10;
 switch (num) {
   case "10":
