@@ -1,6 +1,6 @@
 "use strict";
 
-// const age = +prompt("How old are you", "");
+// const age = +prompt("How old are you?", "");
 // if (age < 7) {
 //   console.log("Sizga kirish bepul");
 // }
@@ -15,9 +15,15 @@
 // }
 
 
+// bir qatorda kod yozish
+// const age1 = +prompt("How old are you?", "");
+// (age1 < 18) ? console.log("Sizga kirish bepul") ? console.log("Sizga kirish 15000 so'm");
 
 
-// // switch case har doim qat'iy rejimda (===) ishlaydi.
+
+
+
+
 // const color = "red";
 // switch (color) {
 //   case "red":
@@ -33,3 +39,11 @@
 //     console.log("Traffic jam");
 //     break;
 // }
+
+// switch case har doim qat'iy rejimda (===) ishlaydi.
+
+const num = 10;
+switch (num) {
+  case "10":
+    console.log("Hello!");
+}
