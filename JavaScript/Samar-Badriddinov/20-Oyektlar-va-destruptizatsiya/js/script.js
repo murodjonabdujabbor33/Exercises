@@ -44,3 +44,31 @@ const theif = {
 //     console.log(`Property ${key} has value ${theif[key]}`);
 //   }
 // }
+
+
+
+// object ichiga o'zimiz metod qo'shishimiz mumkin.
+
+const car = {
+  brand: "GM",
+  model: "Malibu2",
+  price: 30000,
+
+  getPrice: function() {
+    console.log(`${car.brand} ${car.model}. Narhi: ${car.price}`);
+  }
+};
+// car.getPrice();
+
+
+// destruptizatsiya -> object ichidagi ma'lumotni tortib olish.
+// 1-usuli oddiy usuldagi olish:
+const theifHair = theif.color.hair;
+const theifHairStyle = theif.color.style;
+// console.log(theifHair); console.log(theifHairStyle);
+
+// 2-usuli (destruptizatsiya): bunda keylar nomi bir xil bo'lishi shart
+// const {hair} = theif.color;
+// console.log(hair);
+// const {hair, style} = theif.color;
+// console.log(hair, style);
