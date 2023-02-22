@@ -108,8 +108,8 @@ numbers2.push(5);
 const arr3 = ['olma', 'nok', 'uzum', 'shaftoli', 'banan'];
 const mevalar = arr3.slice(1, 4);
 
-console.log(arr3);
-console.log(mevalar);
+// console.log(arr3);
+// console.log(mevalar);
 
 
 
@@ -118,4 +118,17 @@ const Liverpool = ['Salah', 'Mane'];
 const RealMadrid = ['Benzema'];
 
 const mixPlayers = [...Liverpool, ...RealMadrid];
-console.log(mixPlayers);
+// console.log(mixPlayers);
+
+
+// spread yordamida object dan nusxa olish
+const Fruits = {
+  type: "golden",
+  height: 1000000,
+};
+const Fruits2 = {...Fruits};
+
+Fruits2.height = 100;
+
+// console.log(Fruits);
+// console.log(Fruits2);
