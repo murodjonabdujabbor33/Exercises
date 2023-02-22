@@ -25,7 +25,7 @@ let isMale = !isMerried;
 // object dan nusxa olish uchun, alohida function yaratiladi. Lekin tayyor function lar ham bor.
 
 // objectni oddiy clonlash (deep emas) fuction yaratish orqali:
-function copyObj (obj) {
+function copyObj(obj) {
   let objCopy = {};
   for (let key in obj) {
     objCopy[key] = obj[key];
@@ -72,4 +72,50 @@ const savat3 = {
 };
 
 const savatlar = Object.assign(savat1, savat2, savat3);
-console.log(savatlar);
+// console.log(savatlar);
+
+
+
+// massivlardan nusxa olish
+
+// funtion yaratish orqali
+function arrCopy(arr) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    // newArr[i] = arr[i];
+    newArr.push(arr[i]);
+  }
+  return newArr;
+}
+
+const arr = ['Malibu2', "Cobalt", "Nexia"];
+const cars = arrCopy(arr);
+cars.push("Gentra");
+
+// console.log(arr);
+// console.log(cars);
+
+
+// slice() metodi orqali:
+const arr2 = [1, 2, 3, 4];
+const numbers2 = arr2.slice();
+numbers2.push(5);
+
+// console.log(arr2);
+// console.log(numbers2);
+
+
+const arr3 = ['olma', 'nok', 'uzum', 'shaftoli', 'banan'];
+const mevalar = arr3.slice(1, 4);
+
+console.log(arr3);
+console.log(mevalar);
+
+
+
+// spread() metodi orqali bir nechta massivni bitta massivga solish:
+const Liverpool = ['Salah', 'Mane'];
+const RealMadrid = ['Benzema'];
+
+const mixPlayers = [...Liverpool, ...RealMadrid];
+console.log(mixPlayers);
