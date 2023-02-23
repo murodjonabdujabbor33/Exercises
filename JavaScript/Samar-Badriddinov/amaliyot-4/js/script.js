@@ -59,23 +59,25 @@ visableDB: function() {
   }
 },
 writeGenres: function() {
-  for (let i = 0; i < 3; i++) {
-    const movieGenre = prompt(`Yaxshi ko'rgan janringiz ${i+1}`);
-    if (movieGenre === "" || movieGenre === null) {
-      console.log("Siz noto'g'ri ma'lumot kiritdingiz.");
-      i--;
-    }
-    else {
-      seriesDB.genres[i] = movieGenre;
-    }
-  }
-
-  // let genres = prompt("Yaxshi ko'rgan janrlaringizni vergul va bo'sh joy qo'yib yozing.");
-  // if (genres === '' || genres === null) {
-  //   console.log("Siz noto'g'ri ma'lumot kiritdingiz.");
-  // } else {
-  //   seriesDB.genres = genres.split(', ');
+  // for (let i = 0; i < 3; i++) {
+  //   const movieGenre = prompt(`Yaxshi ko'rgan janringiz ${i+1}`).toLowerCase();
+  //   if (movieGenre === "" || movieGenre === null) {
+  //     console.log("Siz noto'g'ri ma'lumot kiritdingiz.");
+  //     i--;
+  //   }
+  //   else {
+  //     seriesDB.genres[i] = movieGenre;
+  //     seriesDB.genres.sort();
+  //   }
   // }
+
+  let genres = prompt("Yaxshi ko'rgan janrlaringizni vergul va bo'sh joy qo'yib yozing.").toLowerCase();
+  if (genres === '' || genres === null) {
+    console.log("Siz noto'g'ri ma'lumot kiritdingiz.");
+  } else {
+    seriesDB.genres = genres.split(', ');
+    seriesDB.genres.sort();
+  }
 
   seriesDB.genres.forEach(function(genre, index) {
     console.log(`Yaxshi ko'rgan ${index + 1} janringiz - ${genre}`);
