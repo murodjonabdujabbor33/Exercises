@@ -37,3 +37,27 @@ function done() {
 }
 
 edu2("JavaScript", done);
+
+
+
+// JS da callback funksiyalari, boshqa funksiyalarni argument sifatida olishi mumkin bo'lgan funksiyalardir.
+// callback funsiyasi biror funksiya o'zi bajarib bo'linganidan keyin bajarilishini taminlaydi.
+// Misolimizda "getUser" funksiyasi "logUser" funksiyasi orqali callback sifatida chaqirilgan. Shunga ko'ra logUser funksiyasi, getUser funksiyasi yakunlanishidan keyin bajarilgan.
+
+function getUser(userId, callback) {
+  const users = {
+    1: 'John',
+    2: 'Bob',
+    3: 'Alice'
+  };
+  setTimeout(() => {
+    const userName = users[userId];
+    callback(userName);
+  }, 1000);
+}
+
+function logUser(user) {
+  console.log(`User: ${user}`);
+}
+
+getUser(2, logUser);
