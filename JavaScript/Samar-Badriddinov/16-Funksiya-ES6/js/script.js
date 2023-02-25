@@ -30,7 +30,7 @@ sayMyName();
 
 
 
-// ARROW FUNCTION --> O'zini shaxsiy context this i mavjud emas. Uning return i default bo'ladi. (strelkali funksiya)
+// ARROW FUNCTION --> O'zini shaxsiy context this i mavjud emas. Uning return i default bo'ladi. (strelkali funksiya). Bu qisqa sintaksisli funksiya e'lon qilish usuli ES6 (ECMAScript 2015)da qo'shilgan.
 
 // 1-usuli
 const calc = (a, b) => a + b;
@@ -46,5 +46,5 @@ sayInfo("Murodjon", "Abdujabbor");
 const returnAge = (age) => {
   return age;
 };
-age1 = returnAge(24);
+let age1 = returnAge(24);
 console.log(age1);

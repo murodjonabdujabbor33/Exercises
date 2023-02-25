@@ -32,21 +32,22 @@ do {
       a--;
     }
   }
-
-    if (SeriesDB.count < 5) {
-      console.log("Kam serial ko'ribsiz.");
-    }
-    else if (SeriesDB.count >= 5 && SeriesDB.count < 10) {
-      console.log("Siz klassik tomoshabin ekansiz.");
-    }
-    else if (SeriesDB.count >= 10) {
-      console.log("Siz Serilachi zvezda ekansiz.");
-    }
-    else {
-      console.log("Error");
-    }
     i++;
+} while(i < 2);
+
+
+
+if (SeriesDB.count < 5) {
+  console.log("Kam serial ko'ribsiz.");
 }
-while(i < 2);
+else if (SeriesDB.count >= 5 && SeriesDB.count < 10) {
+  console.log("Siz klassik tomoshabin ekansiz.");
+}
+else if (SeriesDB.count >= 10) {
+  console.log("Siz Serilachi zvezda ekansiz.");
+}
+else {
+  console.log("Error");
+}
 
 console.log(SeriesDB);

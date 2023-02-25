@@ -1,6 +1,6 @@
 "use strict";
 
-// FOR ORQALI
+// WHILE ORQALI
 
 
 // vazifa-1
@@ -19,7 +19,7 @@ const SeriesDB = {
 // vazifa-3
 let i =0;
 while(i < 2) {
-  const SeriesName = prompt("Oxirgi ko'rgan ko'rgan serialingiz?"),
+  const SeriesName = prompt("Oxirgi ko'rgan serialingiz?"),
     SeriesRating = prompt("Ushbu serialga nechta baho qo'yasiz?");
 
     if (SeriesName != null && SeriesRating != null && SeriesName != "" && SeriesRating != "") {
@@ -30,20 +30,21 @@ while(i < 2) {
       console.log("error");
       i--;
     }
-
-    if (SeriesDB.count < 5) {
-      console.log("Kam serial ko'ribsiz.");
-    }
-    else if (SeriesDB.count >= 5 && SeriesDB.count < 10) {
-      console.log("Siz klassik tomoshabin ekansiz.");
-    }
-    else if (SeriesDB.count >= 10) {
-      console.log("Siz Serilachi zvezda ekansiz.");
-    }
-    else {
-      console.log("Error");
-    }
     i++;
+}
+
+
+if (SeriesDB.count < 5) {
+  console.log("Kam serial ko'ribsiz.");
+}
+else if (SeriesDB.count >= 5 && SeriesDB.count < 10) {
+  console.log("Siz klassik tomoshabin ekansiz.");
+}
+else if (SeriesDB.count >= 10) {
+  console.log("Siz Serilachi zvezda ekansiz.");
+}
+else {
+  console.log("Error");
 }
 
 console.log(SeriesDB);
