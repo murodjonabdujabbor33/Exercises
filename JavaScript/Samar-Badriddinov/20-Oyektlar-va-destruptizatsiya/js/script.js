@@ -61,7 +61,7 @@ const car = {
 // car.getPrice();
 
 
-// destruptizatsiya -> object ichidagi ma'lumotni tortib olish.
+// destruptizatsiya (destructuring) -> object ichidagi ma'lumotni tortib olish.
 // 1-usuli oddiy usuldagi olish:
 const theifHair = theif.color.hair;
 const theifHairStyle = theif.color.style;
@@ -72,3 +72,6 @@ const theifHairStyle = theif.color.style;
 // console.log(hair);
 // const {hair, style} = theif.color;
 // console.log(hair, style);
+
+const {model, brand, price} = car;
+// console.log(model); console.log(brand); console.log(price);
