@@ -1,5 +1,6 @@
 "use strict";
-// DECLORATION FUNCTION --> funksiyadan oldin ham uni ishlatishimiz mumkin.
+// DECLORATION FUNCTION --> funksiyadan oldin ham uni ishlatishimiz mumkin. nomi bilan yartilgan funksiyalar.
+// decloration - bayonot degani.
 function sayHelloWorld() {
   console.log("Hello World!");
 }
@@ -12,12 +13,16 @@ function speakUser(text) {
 speakUser("Mening ismim Murodjon");
 
 
-function sumTwoNumbers(number1, number2) {
-  return number1 + number2;
-}
+
+
 console.log(sumTwoNumbers(10, 10));
 const SumNumber1andNumber2 = sumTwoNumbers(100, 100);
 console.log(SumNumber1andNumber2);
+
+function sumTwoNumbers(number1, number2) {
+  return number1 + number2;
+}
+
 
 
 

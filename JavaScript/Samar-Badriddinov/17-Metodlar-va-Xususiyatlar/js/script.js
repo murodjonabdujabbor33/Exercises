@@ -31,7 +31,7 @@ console.log(text.substring(0, 3)); // manfiy qiymat olmaydi.
 console.log(text.substr(3, 4)); // 3-indexdan boshlab 4 uzunlikni kesish
 
 
-// round() -> soni o'ziga yaqin eng butun songa yaxlitlaydi
+// round() -> sonni o'ziga eng yaqin butun songa yaxlitlaydi
 const num = 8.6;
 console.log(Math.round(num));
 

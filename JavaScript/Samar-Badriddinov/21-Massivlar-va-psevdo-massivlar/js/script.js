@@ -45,7 +45,7 @@ for (let car of cars) {
 }
 
 
-// length ning ishlashi: u massiv elementlarining oxirgisining indexsini aniqlab unga birni qo'shadi. agar massivimizda 10 ta element bo'lsayu biz unga 100 index bilan birorta qiymat qo'shsak, massivimizda 6 ta element bo'lsa ham bizga 101 ta element bor deydi. Oradagi bo'sh joylarda empty item degan narsa bor deydi.
+// length ning ishlashi: u massiv elementlarining oxirgisining indexsini aniqlab unga birni qo'shadi. agar massivimizda 5 ta element bo'lsayu biz unga 100 index bilan birorta qiymat qo'shsak, massivimizda 6 ta element bo'lsa ham bizga 101 ta element bor deydi. Oradagi bo'sh joylarda empty item degan narsa bor deydi.
 const arr5 = [1,2,3,4,5];
 arr5[100] = 9;
 // console.log(arr5.length); // mana ahvol
@@ -92,6 +92,7 @@ sonlar.sort();
 sonlar.sort(compareFN);
 // console.log(sonlar);
 
+// sort muammosi yechimi.
 function compareFN(a, b) {
   return a - b;
 }
