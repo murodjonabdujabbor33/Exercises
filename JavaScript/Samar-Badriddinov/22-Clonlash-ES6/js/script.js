@@ -26,11 +26,11 @@ let isMale = !isMerried;
 
 // objectni oddiy clonlash (deep emas) fuction yaratish orqali:
 function copyObj(obj) {
-  let objCopy = {};
+  let newObj = {};
   for (let key in obj) {
-    objCopy[key] = obj[key];
+    newObj[key] = obj[key];
   }
-  return objCopy;
+  return newObj;
 }
 
 const numbers = {
@@ -76,7 +76,7 @@ const savatlar = Object.assign(savat1, savat2, savat3);
 
 
 
-// massivlardan nusxa olish
+// MASSIVLARDAN NUSXA OLISH:
 
 // funtion yaratish orqali
 function arrCopy(arr) {
@@ -113,7 +113,7 @@ const mevalar = arr3.slice(1, 4);
 
 
 
-// spread() metodi orqali bir nechta massivni bitta massivga solish:
+// spread metodi orqali bir nechta massivni bitta massivga solish:
 const Liverpool = ['Salah', 'Mane'];
 const RealMadrid = ['Benzema'];
 

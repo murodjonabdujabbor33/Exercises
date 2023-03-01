@@ -1,5 +1,10 @@
 "use strict";
 
+// massiv -> biz biladigan massiv
+// psevdo massiv -> soxta massiv, ya'ni massiv bo'lmagan object. Unda biz biladingan massivlarda bor methodlar lenght, push(), pop() va boshqalar yo'q.
+
+// JS da Pseudo massivlar odatda DOM elementlari bilan ishlash uchun ishlatiladi. Masalan getElementsByTagName() va ChildNodes kabilar natijalari kabi.
+
 
 // pop() metodi massivning oxirgi elementini sug'urib oladi.
 const arr = [1, 2, 3, 4, 5, 6];
@@ -32,7 +37,7 @@ for (let i = 0; i < mevalar.length; i++) {
   // console.log(mevalar[i]);
 }
 
-// for of bilan massivlarni iteratsiya qilish.
+// for of bilan massivlarni iteratsiya qilish. Lekin bu mashxur usul emas.
 // odatda massivlarni for of bilan iteratisiya qilinadi.
 const cars = ["Malibu", "Lacetti", "Cobalt", "Nexia"];
 for (let car of cars) {
@@ -40,7 +45,7 @@ for (let car of cars) {
 }
 
 
-// length ning ishlash: u massivning elementlarining oxirgisining indexsini aniqlab unga birni qo'shadi. agar massivimizda 10 ta element bo'lsayu biz unga 100 index bilan birorta qiymat qo'shsak, massivimizda 6 ta element bo'lsa ham bizga 101 ta element bor deydi. Oradagi bo'sh joylarda empty item degan narsa bor deydi.
+// length ning ishlashi: u massiv elementlarining oxirgisining indexsini aniqlab unga birni qo'shadi. agar massivimizda 10 ta element bo'lsayu biz unga 100 index bilan birorta qiymat qo'shsak, massivimizda 6 ta element bo'lsa ham bizga 101 ta element bor deydi. Oradagi bo'sh joylarda empty item degan narsa bor deydi.
 const arr5 = [1,2,3,4,5];
 arr5[100] = 9;
 // console.log(arr5.length); // mana ahvol
@@ -48,7 +53,7 @@ arr5[100] = 9;
 
 
 // eng ommabop iteratsiya qilish usuli:
-// forEach ning qulayligi har bir element uchun forEachdagi callback function ishlaydi.
+// forEach ning qulayligi har bir element uchun forEach dagi callback function ishlaydi.
 // for of ning qulayligi esa if va break lar bilan ishlash osonligida.
 const arr6 = [1, 2, 3, 4, 5];
 arr6.forEach(function(item, index, arr6) {
@@ -56,7 +61,7 @@ arr6.forEach(function(item, index, arr6) {
 });
 
 
-// split() matnlar bilan ishlaydi, elementlarni berilgan ajratuvchi bilan ajratib massiv qiladi.
+// split() matnlar bilan ishlaydi, elementlarni berilgan ajratuvchi bilan ajratib massivga soladi.
 let ifoda = 'The quick brown fox jumps over the lazy dog.';
 let sozlar = ifoda.split(' '); // probel bilan ajratish
 // console.log(sozlar);
@@ -71,12 +76,19 @@ let cars1 = ["Malibu", "Lacetti", "Cobalt", "Nexia"];
 let result = cars1.join(", ");
 // console.log(result);
 
+const result2 = result.split(', ');
+// console.log(result2);
+
 
 // sort() sonlarni o'sish tartibida va matnlarni alfavit tartibida tartiblaydi.
-// sort() ning ichdagi function sonlarni kichikda kattaga qarab tartiblaydi.
+// sort() ning ichdagi function sonlarni kichikdan kattaga qarab tartiblaydi.
 
 // 1-usul
-let sonlar = [4, 2, 7, 1, 9, 6];
+let sonlar = [4, 22, 27, 13, 9, 16];
+// sort() ning muammosi
+sonlar.sort();
+// console.log(sonlar);
+
 sonlar.sort(compareFN);
 // console.log(sonlar);
 
@@ -85,7 +97,7 @@ function compareFN(a, b) {
 }
 
 // 2-usul
-let sonlar2 = [4, 2, 7, 1, 9, 6];
+let sonlar2 = [4, 22, 27, 13, 9, 16];
 sonlar2.sort((a, b) => a - b);
 // console.log(sonlar2);
 
