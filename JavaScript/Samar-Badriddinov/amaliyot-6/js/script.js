@@ -1,44 +1,96 @@
 "use strict";
+// Butun documentga xodisa qo’sish: (sababi, xatolikni oldini olish uchun ishlatiladi. Kerakli hamma dannilar yuklanib olganida keyin bizani kodimiz ishga tushadi)
 
-// ./ -> shu faylning o'zi degani.
-// ../ -> bitta orqaga chiqsh degani.
+document.addEventListener("DOMContentLoaded", () => {
+  const adv = document.querySelectorAll(".promo__adv img"),
+  wrapper = document.querySelector(".promo__bg"),
+  genre = document.querySelector(".promo__genre"),
+  seriesList = document.querySelector(".promo__interactive-list"),
+  addForm = document.querySelector("form.add"),
+  inputVal = addForm.querySelector(".adding__input"),
+  checkbox = addForm.querySelector("[type = 'checkbox'");
 
-// 1-vazifa (Reklama bloklarini o'chirish):
-// const adv = document.querySelector('.promo__adv');
-// const advImg = adv.querySelectorAll('img');
-const advImg = document.querySelectorAll('.promo__adv img');
-console.log(advImg);
 
-advImg.forEach(item => {
-  item.remove();
-});
 
-// 2-vazifa (drama janrini komediya almashtirish):
-const ganreTitle = document.querySelector('.promo__genre');
-ganreTitle.textContent = 'KOMEDIA';
-console.log(ganreTitle);
 
-// 3-vazifa (JavaScript yordamida orqa fonni o'zgartiring):
-const changeBackgrund = document.querySelector('.promo__bg');
-changeBackgrund.style.backgroundImage = 'url(img/1.jpg)';
 
-// 4-5-vazifa (Seriallarni JS dagi massiv yordamida ko'rsating va ularni raqamlang):
-const seriesDB = {
-  series: [
-    'Omar',
-    'The Final Legacy',
-    'Ertugrul',
-    'Magnificent Century',
-    'The Great Saljuks: Guardiands...',
-  ],
+
+  const seriesDB = {
+    series: [
+      'Omar',
+      'The Final Legacy',
+      'Ertugrul',
+      'Magnificent Century',
+      'The Great Saljuks: Guardiands...',
+    ],
+  };
+
+  addForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    let newSeries = inputVal.value;
+    const favourite = checkbox.checked;
+
+    if (newSeries) {
+      if (newSeries.length > 18) {
+        newSeries = `${newSeries.substring(0, 18)}...`;
+      }
+      if (favourite) {
+        console.log("Sevimli serial qo'shildi.");
+      }
+
+      seriesDB.series.push(newSeries);
+
+      sortArr(seriesDB.series);
+      createSeriesList(seriesDB.series, seriesList);
+    }
+
+    event.target.reset();
+  });
+
+  const deleteAdv = (arr) => {
+    adv.forEach((item) => {
+      item.remove();
+    });
+  };
+
+
+const makechanges = () => {
+  genre.textContent = "comedy";
+  wrapper.style.backgroundImage = 'url("img/1.jpg")';
 };
-// console.log(seriesDB.series[0]);
-const seriesList = document.querySelector('.promo__interactive-list');
-//stirng holatida olish:
-// console.log(seriesList.innerHTML);
 
-seriesList.innerHTML = '';
-seriesDB.series.forEach((item, idx) => {
-  seriesList.innerHTML += `<li class="promo__interactive-item">${idx + 1} ${item}
-  <div class="delete"></div></li>`;
+const sortArr = (arr) => {
+  arr.sort();
+};
+
+  function createSeriesList(series, parent) {
+    parent.innerHTML = '';
+    sortArr(series);
+
+    series.forEach((item, idx) => {
+      parent.innerHTML += `
+        <li class = promo__interactive-item>${idx + 1} ${item}
+          <div class = delete></div>
+          </li>
+        `;
+    });
+
+    seriesList.querySelectorAll(".delete").forEach((trash, idx) => {
+      trash.addEventListener("click", () => {
+        trash.parentElement.remove();
+        seriesDB.series.splice(idx, 1);
+
+        createSeriesList(series, parent);
+      });
+    });
+    console.log(seriesDB.series);
+  }
+
+  sortArr(seriesDB.series);
+  deleteAdv(adv);
+  makechanges();
+  createSeriesList(seriesDB.series, seriesList);
+
+
 });
