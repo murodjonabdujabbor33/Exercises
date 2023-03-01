@@ -14,7 +14,7 @@
 // console.log(document.querySelector('#btn3').parentNode.parentNode);
 
 
-// data-current=" " -> biror elementga qiymat berish uchun ishlatiladi.
+// data-current=" " -> biror elementning aynan o'ziga qiymat berish uchun ishlatiladi.
 // console.log(document.querySelector('[data-current="b"]'));
 
 // nextSibling parentElement -> elementdan keyingi elementni olish uchun ishlatiladi.

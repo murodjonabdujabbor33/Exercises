@@ -8,7 +8,7 @@
 
 // 2-usuli: (bu ham sal eskiroq)
 // 1-minus tarafi: ishga tushgan hodisani o'chirib tashlay olmaymiz.
-// 2-minus tarafi: bilmasdan 2 va undan ko'p funksiya yozib yuborilsa, bizga oxirgi funksiyani bajarib beradi.
+// 2-minus tarafi: bilmasdan 2 va undan ko'p funksiya yozib yuborilsa, bizga oxirgi funksiyani bajarib beradi holos.
 const btn2 = document.querySelector('#btn2');
 btn2.onclick = function() {
   alert('Sal Eskiroq');
@@ -21,9 +21,9 @@ btn3.addEventListener('click', () => {
   alert('Yangi');
 });
 
-// btn3.addEventListener('click', () => {
-//   alert('Yangi 2');
-// });
+btn3.addEventListener('click', () => {
+  alert('Yangi 2');
+});
 
 
 // Har bir hodisada hodisaning detallar mavjud:
@@ -58,7 +58,7 @@ btn2.addEventListener('click', addElement);
 
 
 
-// bola elementno bossak ona element ham bosilishi:
+// bola elementni bossak ona element ham bosilishi:
 const overlay = document.querySelector('.overlay');
 const cb = (event) => {
   console.log(event.currentTarget);

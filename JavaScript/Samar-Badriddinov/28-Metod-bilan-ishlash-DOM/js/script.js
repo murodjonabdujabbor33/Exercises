@@ -39,7 +39,7 @@ const btn = document.createElement('button');
 document.body.append(btn);
 
 
-// HTML ichidagi circle__wrapper degan class ichidagi circle class iga qo'shish
+// HTML ichidagi circle__wrapper degan class nomi element ichidagi circle class nomli elementlar qatoriga qo'shish
 const circleWrapper = document.querySelector('.circle__wrapper');
 const myCircle = document.createElement('div');
 // elementga cllass qo'shish
@@ -62,16 +62,16 @@ const myCircle = document.createElement('div');
 myCircle.textContent = 'E'; // userdan input olishda foydali bo'lishi mumkin.
 
 
-// biror class nomidagi element atrofiga element qo'shish:
+// biror class nomli element atrofiga element qo'shish:
 
-// shu class nomidagi element ichining boshiga boshiga qo'shish:
+// shu class nomli element ichining boshiga qo'shish:
 circleWrapper.insertAdjacentHTML("afterbegin", "<pre>E</pre>");
 
-// shu class nomidagi element ichining oxiriga qo'shish:
+// shu class nomli element ichining oxiriga qo'shish:
 circleWrapper.insertAdjacentHTML("beforeend", "<pre>F</pre>");
 
-// shu class nomidagi elementni yuqorisiga element qo'yish:
+// shu class nomli elementni yuqorisiga element qo'yish:
 circleWrapper.insertAdjacentHTML("beforebegin", "<pre>G</pre>");
 
-// shu class nomidagi elementni pastiga element qo'yish:
+// shu class nomli elementni pastiga element qo'yish:
 circleWrapper.insertAdjacentHTML("afterend", "<pre>H</pre>");

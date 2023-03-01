@@ -15,6 +15,7 @@ const car = {
   motor: 'X',
   color: 'red',
   isAirbag: true,
+
   isSpeed: function() {
     console.log(320);
   }
