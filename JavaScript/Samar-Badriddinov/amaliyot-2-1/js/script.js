@@ -44,4 +44,6 @@ else {
   console.log("Error");
 }
 
+
+
 console.log(SeriesDB);

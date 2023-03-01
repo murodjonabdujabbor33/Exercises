@@ -16,6 +16,8 @@ const SeriesDB = {
   Private: false,
 };
 
+
+
 // vazifa-3
 let i =0;
 while(i < 2) {
