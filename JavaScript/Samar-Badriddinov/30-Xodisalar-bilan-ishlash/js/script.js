@@ -18,7 +18,7 @@ btn2.onclick = function() {
 // plus tarafi, undagi har bir funksiya birma-bir ishlab chiqadi.
 const btn3 = document.querySelector('#btn3');
 btn3.addEventListener('click', () => {
-  alert('Yangi');
+  alert('Yangi 1');
 });
 
 btn3.addEventListener('click', () => {
