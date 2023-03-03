@@ -26,11 +26,11 @@
 
 
 // nodes ning ichdan kerakli elementlarni topish:
-console.log(document.body.childNodes);
+// console.log(document.body.childNodes);
 
-for (let node of document.body.childNodes) {
-  if (node.nodeName == '#text') {
-    continue;
-  }
-  console.log(node);
-}
+// for (let node of document.body.childNodes) {
+//   if (node.nodeName == '#text') {
+//     continue;
+//   }
+//   console.log(node);
+// }
