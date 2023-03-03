@@ -39,7 +39,7 @@ const btn = document.createElement('button');
 document.body.append(btn);
 
 
-// HTML ichidagi circle__wrapper degan class nomi element ichidagi circle class nomli elementlar qatoriga qo'shish
+// HTML ichidagi circle__wrapper degan class nomli element ichidagi circle class nomli elementlar qatoriga qo'shish
 const circleWrapper = document.querySelector('.circle__wrapper');
 const myCircle = document.createElement('div');
 // elementga cllass qo'shish
