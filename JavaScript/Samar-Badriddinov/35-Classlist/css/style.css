@@ -1,0 +1,16 @@
+.blue-some {
+  background-color: blue;
+  width: 60px;
+  height: 30px;
+}
+
+button {
+  background-color: yellow;
+  width: 60px;
+  height: 30px;
+}
+
+#first {
+  background-color: gray;
+  padding: 10px;
+}
