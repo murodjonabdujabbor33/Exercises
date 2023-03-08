@@ -28,7 +28,7 @@ btns[2].classList.toggle('blue'); // yo'giga qo'shish
 btns[6].classList.add('blue', 'some');
 
 
-// element ichida qaysidir class bor yo'qligini tekshirib beradi.
+// contains() -> element ichida qaysidir class bor yo'qligini tekshirib beradi.
 btns[0].classList.add('red');
 
 if (btns[0].classList.contains('red')) {
