@@ -1,46 +1,64 @@
 "use strict";
 
-const btns = document.querySelectorAll("button");
-
-// elementga nechta klass berilganligini bilish:
-console.log(btns[0].classList); // DomTokenList()
-console.log(btns[0].classList.length);
-
-
-// element ichidiga klasslarga murojaat qilish:
-console.log(btns[0].classList.item(2));
-
-
-// elementdan class ni o'chirib tashlash:
-btns[0].classList.remove('blue');
-
-
-// elementga class qo'shish:
-btns[1].classList.add('blue');
-
-
-// toggle() -> elementda biz bermoqchi bo'lgan class bo'lsa, uni yo'q qiladi, yo'q bo'lsa, qo'shadi.
-btns[1].classList.toggle('blue'); // borini o'chirish
-btns[2].classList.toggle('blue'); // yo'giga qo'shish
-
-
-// elementga birdaniga bir nechta klass qo'shish:
-btns[6].classList.add('blue', 'some');
-
-
-// element ichida qaysidir class bor yo'qligini tekshirib beradi.
-btns[0].classList.add('red');
-
-if (btns[0].classList.contains('red')) {
-  console.log('yeap');
-}
-
-
-// toggle() metodining qanday ishlash:
-btns[0].addEventListener('click', () => {
-  if (!btns[1].classList.contains('red')) {
-    btns[1].classList.add('red');
-  } else {
-    btns[1].classList.remove('red');
-  }
+// qaysi element bosilsa, u haqidagi block ma'lumotlar chiqadi.
+const wrapper = document.querySelector('.btn-block');
+wrapper.addEventListener('click', (event) => {
+  console.dir(event.target);
 });
+
+
+
+// faqatgina knopkani bosgandagina ma'lumot chiqarish:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ona elementdan turib bola elementga qandadir xodisa qo'shishimiz mumkin.
+
+// const wrapper = document.querySelector('.btn-block'),
+//   btns = document.querySelectorAll('button');
+
+
+// btns[0].addEventListener('click', () => {
+//   btns[1].classList.toggle('red');
+// });
+
+// wrapper.addEventListener("click", (event) => {
+//   if (event.target && event.target.classList.contains('red')) {
+//     console.log('btn click');
+//   }
+// });
+
+// const btn = document.createElement('button');
+// btn.classList.add('red');
+// wrapper.append(btn);
+
+
+
+
+// delegatsiyaning muhimligiga sabab:
+
+// btns.forEach((item) => {
+//   item.addEventListener("click", () => {
+//     console.log('clicked');
+//   });
+// });
+
+// const btn = document.createElement('button');
+// btn.classList.add('red');
+// wrapper.append(btn);
